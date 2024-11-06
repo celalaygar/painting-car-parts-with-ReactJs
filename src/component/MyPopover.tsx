@@ -42,9 +42,11 @@ const MyPopover: React.FC<MyPopoverProps> = ({ setSvgFillColor, svgIndex, svgFil
                     <Popover.Arrow className="fill-white" />
 
                     {/* Hatasız */}
-                    <div className="flex items-center gap-x-1 mb-1">
+                    <div
+                        className="flex items-center gap-x-1 mb-1 cursor-pointer"
+                        onClick={() => handleColorChange("#CCCCCC")}
+                    >
                         <button
-                            onClick={() => handleColorChange("#CCCCCC")}
                             className="p-2 rounded-full"
                         >
                             <div
@@ -60,7 +62,9 @@ const MyPopover: React.FC<MyPopoverProps> = ({ setSvgFillColor, svgIndex, svgFil
                     </div>
 
                     {/* Lokal Boyalı */}
-                    <div className="flex items-center gap-x-1 mb-1">
+                    <div className="flex items-center gap-x-1 mb-1 cursor-pointer"
+                        onClick={() => handleColorChange("#FFFF30")}
+                    >
                         <button
                             onClick={() => handleColorChange("#FFFF30")}
                             className="p-2 rounded-full"
@@ -78,7 +82,9 @@ const MyPopover: React.FC<MyPopoverProps> = ({ setSvgFillColor, svgIndex, svgFil
                     </div>
 
                     {/* Boyalı */}
-                    <div className="flex items-center gap-x-1 mb-1">
+                    <div className="flex items-center gap-x-1 mb-1 cursor-pointer"
+                        onClick={() => handleColorChange("#0080FF")}
+                    >
                         <button
                             onClick={() => handleColorChange("#0080FF")}
                             className="p-2 rounded-full"
@@ -96,7 +102,9 @@ const MyPopover: React.FC<MyPopoverProps> = ({ setSvgFillColor, svgIndex, svgFil
                     </div>
 
                     {/* Değişmiş */}
-                    <div className="flex items-center gap-x-1 mb-1">
+                    <div className="flex items-center gap-x-1 mb-1 cursor-pointer"
+                        onClick={() => handleColorChange("#FF0000")}
+                    >
                         <button
                             onClick={() => handleColorChange("#FF0000")}
                             className="p-2 rounded-full"
