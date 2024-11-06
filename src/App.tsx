@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import My0000 from './0000.svg';
-import SolArkaKapi from './component/SolKapi';
+import MySVG from './component/MySVG';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +16,7 @@ function App() {
       </div> */}
       <div style={{ padding: '20px' }}>
         <h1>Component</h1>
-        <SolArkaKapi />
+        <MySVG />
       </div>
     </>
   )
