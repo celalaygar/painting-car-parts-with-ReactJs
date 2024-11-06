@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // veya "react",
+    "target": "es6", // Hedef ES sürümü
+    "module": "esnext", // Modül sistemi
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ], // Kullanılacak kütüphaneler
+    "allowJs": true, // JavaScript dosyalarını kullanmaya izin verir
+    "skipLibCheck": true, // Kütüphaneler için tür kontrolünü atlar
+    "forceConsistentCasingInFileNames": true, // Dosya isimlerinde büyük/küçük harf tutarlılığı zorunlu
+    "esModuleInterop": true, // CommonJS modüllerini ES modülleri gibi içe aktarmaya izin verir
+    "moduleResolution": "node", // Modül çözümleme stratejisi
+    "resolveJsonModule": true, // JSON modüllerini içe aktarmaya izin verir
+    "isolatedModules": true, // Her dosyanın kendi modül olarak değerlendirilmesini sağlar
+    "noEmit": true
+  }
+}
