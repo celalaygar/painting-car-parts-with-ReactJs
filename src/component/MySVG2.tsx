@@ -212,7 +212,7 @@ const MySVG2 = () => {
             </svg>
 
             </>
-            <MyPopover2
+            <MyPopover
                 isOpen={isPopoverOpen}
                 onOpenChange={setPopoverOpen}
                 position={popoverPosition}
