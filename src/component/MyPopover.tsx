@@ -39,6 +39,7 @@ const MyPopover: React.FC<MyPopoverProps> = ({
 
         {colors.map(({ color, label }) => (
           <div
+          style={{minWidth: "200px"}}
             key={color}
             className={`flex items-center gap-x-1 mb-1 cursor-pointer ${
               selectedColor === color ? "font-black" : ""
