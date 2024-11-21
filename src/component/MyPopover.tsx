@@ -17,7 +17,7 @@ const MyPopover: React.FC<MyPopoverProps> = ({
   selectedColor,
 }) => {
   const colors = [
-    { color: "#CCCCCC", label: "Hatasız" },
+    { color: "#AABBAB", label: "Hatasız" },
     { color: "#FFFF30", label: "Lokal Boyalı" },
     { color: "#0080FF", label: "Boyalı" },
     { color: "#FF0000", label: "Değişmiş" },
