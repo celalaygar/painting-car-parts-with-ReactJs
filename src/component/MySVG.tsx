@@ -3,25 +3,31 @@ import MyPopover from './MyPopover';
 import * as Popover from '@radix-ui/react-popover';
 
 const MySVG = () => {
-    const [svgFillColor, setSvgFillColor] = useState<string[]>([
-        "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC",
-        "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC",
-        "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC", "#CCCCCC"]);
-    const [svgIndex, setSvgIndex] = useState<number>(null)
-
-
+    
+    const [svgFillColor, setSvgFillColor] = useState<string[]>(Array(18).fill("#CCCCCC"));
+    const [svgIndex, setSvgIndex] = useState<number | null>(null);
     const [isPopoverOpen, setPopoverOpen] = useState(false);
     const [popoverPosition, setPopoverPosition] = useState({ top: 0, left: 0 });
-
+  
     const handlePathClick = (event, index: number) => {
-        const rect = event.target.getBoundingClientRect();
-        setPopoverPosition({
-            top: rect.top + window.scrollY,
-            left: rect.left + window.scrollX,
-        });
-        setPopoverOpen(true);
-        setSvgIndex(index)
+      const rect = event.target.getBoundingClientRect();
+      setPopoverPosition({
+        top: rect.top + window.scrollY,
+        left: rect.left + window.scrollX,
+      });
+      setPopoverOpen(true);
+      setSvgIndex(index);
     };
+  
+    const handleColorChange = (color: string) => {
+      if (svgIndex === null) return;
+      const updatedColors = [...svgFillColor];
+      updatedColors[svgIndex] = color;
+      setSvgFillColor(updatedColors);
+    };
+    const selectedColor = svgIndex !== null ? svgFillColor[svgIndex] : "#CCCCCC";
+
+    
     return (
         <>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="459" height="558">
@@ -122,24 +128,13 @@ const MySVG = () => {
             </svg>
 
 
-            <Popover.Root open={isPopoverOpen} onOpenChange={setPopoverOpen}>
-                <Popover.Trigger style={{ display: 'none' }} />
-                <Popover.Content
-                    style={{
-                        position: 'absolute',
-                        top: popoverPosition.top,
-                        left: popoverPosition.left,
-                        zIndex: 10,
-                    }}
-                >
-
-                    <MyPopover
-                        setSvgFillColor={setSvgFillColor}
-                        svgIndex={svgIndex}
-                        svgFillColor={svgFillColor}
-                    />
-                </Popover.Content>
-            </Popover.Root>
+            <MyPopover
+                isOpen={isPopoverOpen}
+                onOpenChange={setPopoverOpen}
+                position={popoverPosition}
+                onColorChange={handleColorChange}
+                selectedColor={selectedColor}
+            />
         </>
     )
 };
