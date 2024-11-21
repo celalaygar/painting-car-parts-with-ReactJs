@@ -24,6 +24,7 @@ const MyCar = () => {
       const updatedColors = [...svgFillColor];
       updatedColors[svgIndex] = color;
       setSvgFillColor(updatedColors);
+      setPopoverOpen(false);
     };
     const selectedColor = svgIndex !== null ? svgFillColor[svgIndex] : "#AABBAB";
 
