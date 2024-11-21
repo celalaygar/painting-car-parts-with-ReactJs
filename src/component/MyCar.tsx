@@ -3,7 +3,7 @@ import MyPopover from './MyPopover';
 import * as Popover from '@radix-ui/react-popover';
 import MyPopover2 from './MyPopover2';
 
-const MySVG2 = () => {
+const MyCar = () => {
     const [svgFillColor, setSvgFillColor] = useState<string[]>(Array(18).fill("#AABBAB"));
     const [svgIndex, setSvgIndex] = useState<number | null>(null);
     const [isPopoverOpen, setPopoverOpen] = useState(false);
@@ -219,4 +219,4 @@ const MySVG2 = () => {
     )
 };
 
-export default MySVG2;
+export default MyCar;
