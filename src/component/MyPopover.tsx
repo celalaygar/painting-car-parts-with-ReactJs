@@ -40,21 +40,23 @@ const MyPopover: React.FC<MyPopoverProps> = ({
 
         {colors.map(({ color, label }) => (
           <div
-          style={{minWidth: "200px"}}
+          style={{minWidth: "125px"}}
             key={color}
             className={`flex items-center gap-x-1 mb-1 cursor-pointer ${
-              selectedColor === color ? "font-black" : ""
+              selectedColor === color ? "font-semibold" : ""
             }`}
             onClick={() => onColorChange(color)}
           >
-            <button className="p-2 rounded-full">
+            <button className="rounded-full">
               <div
+              className="m-1 "
                 style={{
-                  height: "25px",
-                  width: "25px",
+                  height: "22px",
+                  width: "22px",
+                  fontSize: '10px',
                   backgroundColor: color,
                   borderRadius: "15px",
-                  border: selectedColor === color ? "4px solid black" : "none",
+                  border: selectedColor === color ? "3px solid black" : "none",
                 }}
               />
             </button>
