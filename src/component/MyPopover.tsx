@@ -1,5 +1,6 @@
 import React from "react";
 import * as Popover from "@radix-ui/react-popover";
+import { CarColor } from "./CarParts";
 
 interface MyPopoverProps {
   isOpen: boolean;
@@ -17,10 +18,10 @@ const MyPopover: React.FC<MyPopoverProps> = ({
   selectedColor,
 }) => {
   const colors = [
-    { color: "#AABBAB", label: "Hatasız" },
-    { color: "#FFFF30", label: "Lokal Boyalı" },
-    { color: "#0080FF", label: "Boyalı" },
-    { color: "#FF0000", label: "Değişmiş" },
+    { color: CarColor.DEFECT_FREE, label: "Hatasız" },
+    { color: CarColor.LOCALLY_PAINTED, label: "Lokal Boyalı" },
+    { color: CarColor.PAINTED, label: "Boyalı" },
+    { color: CarColor.CHANGED, label: "Değişmiş" },
   ];
 
   return (
