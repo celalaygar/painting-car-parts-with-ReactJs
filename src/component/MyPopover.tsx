@@ -54,7 +54,7 @@ const MyPopover: React.FC<MyPopoverProps> = ({
                   width: "25px",
                   backgroundColor: color,
                   borderRadius: "15px",
-                  border: selectedColor === color ? "2px solid black" : "none",
+                  border: selectedColor === color ? "4px solid black" : "none",
                 }}
               />
             </button>
