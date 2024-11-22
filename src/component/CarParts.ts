@@ -13,9 +13,10 @@ export const CarColorStatus = {
 } as const;
 
 export const CarColor = {
-    CHANGED: "#FF0000",
-    PAINTED: "#0080FF",
-    LOCALLY_PAINTED: "#FFFF30",
+    DEFAULT: "#BBCCBC",
+    CHANGED: "#516abd",
+    PAINTED: "#d44c5a",
+    LOCALLY_PAINTED: "#f2f29b",
     DEFECT_FREE: "#AABBAB",
 } as const;
 
@@ -57,55 +58,55 @@ export type CarBodyParts = {
 
 export const carBodyParts: CarBodyParts = {
     FRONT: {
-        color: undefined,
+        color: CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     REAR: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     RIGHT_FRONT_DOOR: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     LEFT_FRONT_DOOR: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     RIGHT_REAR_DOOR: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     LEFT_REAR_DOOR: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     ROOF: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     RIGHT_FRONT_FENDER: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     LEFT_FRONT_FENDER: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     RIGHT_REAR_FENDER: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     LEFT_REAR_FENDER: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     FRONT_BUMPER: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
     REAR_BUMPER: {
-        color:  undefined,
+        color:  CarColor.DEFECT_FREE,
         partChangeStatus: CarStatus.DEFECT_FREE
     },
 };
