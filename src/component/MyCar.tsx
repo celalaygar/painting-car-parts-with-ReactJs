@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import { carBodyParts, CarBodyParts, CarBodyPartsKeys,  CarColor,  CarColorStatus, CarStatus } from './CarParts';
 import MyPopover from './MyPopover';
-import { carBodyParts, CarBodyParts, CarBodyPartsKeys,  CarColorStatus, CarStatus } from './CarParts';
 
 const MyCar = () => {
     const [svgFillColor, setSvgFillColor] = useState<string[]>(Array(18).fill("#AABBAB"));
@@ -18,11 +18,6 @@ const MyCar = () => {
               partChangeStatus: CarStatus[CarColorStatus[updatedColors]],
           
         }
-        console.log("selectedCarBodyPart " + selectedCarBodyPart)
-        console.log("updatedColors " + updatedColors)
-        console.log("CarColorStatus[updatedColors] " + CarColorStatus[updatedColors])
-        console.log("CarStatus[CarColorStatus[updatedColors]] " + CarStatus[CarColorStatus[updatedColors]])
-        console.log(keyList)
         setCarParts(keyList)
     };
     const handlePathClick = (key: string, event, index: number) => {
