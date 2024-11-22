@@ -49,19 +49,57 @@ type CarBodyParts {
     [key in CarBodyPartsKeysType]: CarBodyPart;
 }
 
-// Örnek araba parçalarını oluştur
 export const carBodyParts: CarBodyParts = {
-    FRONT: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    REAR: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    RIGHT_FRONT_DOOR: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    LEFT_FRONT_DOOR: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    RIGHT_REAR_DOOR: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    LEFT_REAR_DOOR: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    ROOF: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    RIGHT_FRONT_FENDER: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    LEFT_FRONT_FENDER: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    RIGHT_REAR_FENDER: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    LEFT_REAR_FENDER: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    FRONT_BUMPER: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
-    REAR_BUMPER: { color: "#AABBAB", partChangeStatus: CarStatus.DEFECT_FREE },
+    FRONT: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    REAR: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    RIGHT_FRONT_DOOR: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    LEFT_FRONT_DOOR: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    RIGHT_REAR_DOOR: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    LEFT_REAR_DOOR: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    ROOF: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    RIGHT_FRONT_FENDER: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    LEFT_FRONT_FENDER: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    RIGHT_REAR_FENDER: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    LEFT_REAR_FENDER: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    FRONT_BUMPER: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
+    REAR_BUMPER: {
+        color: CarColorStatus.DEFECT_FREE,
+        partChangeStatus: CarStatus.DEFECT_FREE
+    },
 };
