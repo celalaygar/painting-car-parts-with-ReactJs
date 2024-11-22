@@ -27,8 +27,8 @@ const MyCar = () => {
     const handlePathClick = (key: string, event, index: number) => {
       const rect = event.target.getBoundingClientRect();
       setPopoverPosition({
-        top: rect.top + window.scrollY,
-        left: rect.left + window.scrollX,
+        top: rect.top + window.scrollY + 25,
+        left: rect.left + window.scrollX + 25,
       });
       setPopoverOpen(true);
       setSvgIndex(index);
