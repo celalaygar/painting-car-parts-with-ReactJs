@@ -51,3 +51,62 @@ export default tseslint.config({
   },
 })
 ```
+
+
+as a json result of carBodyParts variable after choosing and coloring car parts
+```
+{
+  "FRONT": {
+    "color": "#d44c5a",
+    "partChangeStatus": "PAINTED"
+  },
+  "REAR": {
+    "color": "#516abd",
+    "partChangeStatus": "CHANGED"
+  },
+  "RIGHT_FRONT_DOOR": {
+    "color": "#f2f29b",
+    "partChangeStatus": "LOCALLY_PAINTED"
+  },
+  "LEFT_FRONT_DOOR": {
+    "color": "#AABBAB",
+    "partChangeStatus": "DEFECT_FREE"
+  },
+  "RIGHT_REAR_DOOR": {
+    "color": "#d44c5a",
+    "partChangeStatus": "PAINTED"
+  },
+  "LEFT_REAR_DOOR": {
+    "color": "#BBCCBC",
+    "partChangeStatus": "CHANGED"
+  },
+  "ROOF": {
+    "color": "#f2f29b",
+    "partChangeStatus": "LOCALLY_PAINTED"
+  },
+  "RIGHT_FRONT_FENDER": {
+    "color": "#516abd",
+    "partChangeStatus": "CHANGED"
+  },
+  "LEFT_FRONT_FENDER": {
+    "color": "#AABBAB",
+    "partChangeStatus": "DEFECT_FREE"
+  },
+  "RIGHT_REAR_FENDER": {
+    "color": "#BBCCBC",
+    "partChangeStatus": "DEFECT_FREE"
+  },
+  "LEFT_REAR_FENDER": {
+    "color": "#f2f29b",
+    "partChangeStatus": "LOCALLY_PAINTED"
+  },
+  "FRONT_BUMPER": {
+    "color": "#516abd",
+    "partChangeStatus": "CHANGED"
+  },
+  "REAR_BUMPER": {
+    "color": "#d44c5a",
+    "partChangeStatus": "PAINTED"
+  }
+}
+```
