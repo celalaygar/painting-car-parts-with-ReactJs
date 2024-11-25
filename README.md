@@ -40,6 +40,9 @@ Follow the steps below to set up and run the project:
    ```bash
    npm run preview
 
+---
+
+
 ## Functionality Overview
 
 1. **Car Body Parts Visualization:**
@@ -56,6 +59,7 @@ Follow the steps below to set up and run the project:
 2. **Resulting JSON:**
 The current configuration of the car (parts and their colors/statuses) is displayed as a JSON object. This JSON can be used for further processing or saved for later use.
 
+---
 
 ## Car Body Parts JSON Example
 
@@ -116,6 +120,9 @@ Below is an example of the JSON output after customizing the car parts:
   }
 }
 ```
+
+---
+
 ## Technologies Used
 - Vite: Lightning-fast frontend build tool.
 - React: For building interactive user interfaces.
