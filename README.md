@@ -1,59 +1,65 @@
 ![Resim Açıklaması](./ADD.png)
 
+# React Car Color Customizer
 
-# React + TypeScript + Vite
+This project is a React-based car customization application using **Vite**, **TypeScript**, **Tailwind CSS**, and **Material-UI (MUI)**. The application allows users to select car body parts from an SVG image and assign colors to them. Each color corresponds to a specific status (`partChangeStatus`), and the resulting configuration is displayed in JSON format.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Setup Instructions](#setup-instructions)
+- [Functionality Overview](#functionality-overview)
+- [Car Body Parts JSON Example](#car-body-parts-json-example)
+- [Technologies Used](#technologies-used)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Setup Instructions
 
-- Configure the top-level `parserOptions` property like this:
+Follow the steps below to set up and run the project:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd <repository-folder>
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. **Install Dependencies: Make sure you have Node.js installed. Run:**
+   ```bash
+   npm install
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. **Run the Development Server: Start the application in development mode:**
+   ```bash
+   npm run dev
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+4. **Build for Production: To create a production-ready build:**
+   ```bash
+   npm run build
+
+5. **Preview Production Build: To preview the production build:**
+   ```bash
+   npm run preview
+
+**Functionality Overview
+
+1. **Car Body Parts Visualization:**
+   The application displays an SVG representation of a car. Each part (e.g., doors, roof, bumpers) is clickable.
+
+2. **Color Assignment:**
+- Users can select a body part and assign one of the following colors:
+  - Red (#FF0000) - CHANGED
+  - Blue (#0080FF) - PAINTED
+  - Yellow (#FFFF30) - LOCALLY_PAINTED
+  - Gray (#AABBAB) - DEFECT_FREE
+- After assigning a color, the partChangeStatus for the selected part will update accordingly.
+
+2. **Resulting JSON:**
+The current configuration of the car (parts and their colors/statuses) is displayed as a JSON object. This JSON can be used for further processing or saved for later use.
 
 
-as a json result of carBodyParts variable after choosing and coloring car parts
+## Car Body Parts JSON Example
+
+Below is an example of the JSON output after customizing the car parts:
 ```
 {
   "FRONT": {
@@ -110,3 +116,9 @@ as a json result of carBodyParts variable after choosing and coloring car parts
   }
 }
 ```
+## Technologies Used
+- Vite: Lightning-fast frontend build tool.
+- React: For building interactive user interfaces.
+- TypeScript: For type safety and maintainability.
+- Tailwind CSS: For utility-first styling.
+- Material-UI (MUI): For pre-styled, customizable React components.
