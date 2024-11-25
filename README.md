@@ -40,7 +40,7 @@ Follow the steps below to set up and run the project:
    ```bash
    npm run preview
 
-**Functionality Overview
+## Functionality Overview
 
 1. **Car Body Parts Visualization:**
    The application displays an SVG representation of a car. Each part (e.g., doors, roof, bumpers) is clickable.
